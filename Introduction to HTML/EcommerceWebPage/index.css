@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+
+.header {
+    background-color: blue;
+    color: white;
+    display: flex;
+
+}
+
+#logo {
+    margin: 10px;
+}
+
+ul {
+    display: flex;
+}
