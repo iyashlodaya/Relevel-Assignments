@@ -1,3 +1,6 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
 body{
     margin: 0;
 }
@@ -47,6 +50,7 @@ li {
 .product-name {
     padding-top: 5px;
     font-size: 18px;
+    font-weight: bolder;
 }
 
 .product-detail {
@@ -74,10 +78,12 @@ li {
     color: grey;
     text-decoration: line-through;
     margin-right: 5px;
+
 }
 
 #selling-price {
     margin: 0;
+    font-weight: bolder;
     margin-right: 5px;
 }
 
