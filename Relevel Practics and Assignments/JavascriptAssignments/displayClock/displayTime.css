@@ -1,0 +1,13 @@
+/* #clock {
+    text-align: center;
+    font-size: 200px;
+    margin-top: 150px;
+} */
+
+#clock {
+  font-size: 140px;
+  width: 900px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 200px;
+  text-align: center;
+}
