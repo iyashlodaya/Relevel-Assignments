@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Area of Triangle</title>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Q. find the area of a triangle where lengths of the
+            three of its sides (2,8,9) (10,10,10) values are in cms.</h4>
+
+        <input id='sideOne' class="form-control mb-2" type="number" placeholder="Enter Side 1" required>
+        <input id='sideTwo' class="form-control mb-2" type="number" placeholder="Enter Side 2" required>
+        <input id='sideThree' class="form-control mb-2" type="number" placeholder="Enter Side 3" required>
+
+
+        <button class="btn btn-primary mb-1" onclick="calculateArea()">Calculate</button>
+        <h4 id="area" class="mt-1">0</h4>
+    </div>
+
+    <script src="areaOfTriangle.js"></script>
+</body>
+
+</html>
