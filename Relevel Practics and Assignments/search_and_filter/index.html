@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <title>Search and Filter Application</title>
 </head>
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D1E8E4;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d1e8e4;">
         <a class="navbar-brand ms-2">
             SocialShop
         </a>
@@ -37,8 +37,10 @@
             <div class="d-flex ms-auto pe-2">
                 <form onsubmit="searchCaseSensitve(event)" class="d-flex">
                     <input oninput="searchCaseSensitve(event)" id="searchInput" class="form-control me-2" type="search"
-                        placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" onsubmit="searchCaseSensitve(event)">Search</button>
+                        placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit" onsubmit="searchCaseSensitve(event)">
+                        Search
+                    </button>
                 </form>
             </div>
         </div>
@@ -48,82 +50,95 @@
             <div class="col-3">
                 <div class="filterSection pt-2">
                     <h6><small>FILTERS</small></h6>
-                    <hr>
+                    <hr />
                     <div class="starts-with-filter">
-                        <p><small><b>Starts With</b></small></p>
+                        <p>
+                            <small><b>Starts With</b></small>
+                        </p>
                         <div class="d-flex">
-                            <input oninput="searchByStartLetter()" id="startsWithInput" class="form-control me-2" type="search"
-                                placeholder="Search" aria-label="Search">
+                            <input oninput="searchByStartLetter()" id="startsWithInput" class="form-control me-2"
+                                type="search" placeholder="Search" aria-label="Search" />
                         </div>
                     </div>
-                    <hr>
+                    <hr />
                     <div class="ends-with-filter">
-                        <p><small><b>Ends With</b></small></p>
+                        <p>
+                            <small><b>Ends With</b></small>
+                        </p>
                         <div class="d-flex">
-                            <input oninput="searchByEndLetter()" id="endsWithInput" class="form-control me-2" type="search"
-                                placeholder="Search" aria-label="Search">
+                            <input oninput="searchByEndLetter()" id="endsWithInput" class="form-control me-2"
+                                type="search" placeholder="Search" aria-label="Search" />
                         </div>
                     </div>
-                    <hr>
+                    <hr />
                     <div class="includes-filter">
-                        <p><small><b>Includes</b></small></p>
+                        <p>
+                            <small><b>Includes</b></small>
+                        </p>
                         <div class="d-flex">
-                            <input oninput="searchByIncludedLetter()" id="includesInput" class="form-control me-2" type="search"
-                                placeholder="Search" aria-label="Search">
+                            <input oninput="searchByIncludedLetter()" id="includesInput" class="form-control me-2"
+                                type="search" placeholder="Search" aria-label="Search" />
                         </div>
                     </div>
-                    <hr>
+                    <hr />
                     <div class="category-filer">
-                        <p><small><b>Themes</b></small></p>
+                        <p>
+                            <small><b>Themes</b></small>
+                        </p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                             <label class="form-check-label" for="flexCheckChecked">
                                 Star Wars
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
                             <label class="form-check-label" for="flexCheckChecked">
                                 Tie and Die
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
                             <label class="form-check-label" for="flexCheckChecked">
                                 Socials
                             </label>
                         </div>
                     </div>
-                    <hr>
+                    <hr />
                 </div>
             </div>
             <div class="col-9">
                 <div class="p-3 d-flex flex-column">
-
                     <div class="d-flex">
                         <div class="card w-25 m-4">
-                            <img class="card-img-top" src="./assets/whatsapp.png" alt="Card image cap">
+                            <img class="card-img-top"
+                                src="https://purepng.com/public/uploads/large/purepng.com-brown-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-6915223304799xzls.png"
+                                alt="Card image cap" />
                             <div class="card-body">
-                                <h5 id="item_one" class="card-title">Whatsapp</h5>
-                                <p class="card-text">by Meta</p>
+                                <h5 id="item_one" class="card-title">Brown Shirt</h5>
+                                <p class="card-text">by MetaInc</p>
                                 <a href="#" class="btn btn-primary">Go to Website</a>
                             </div>
                         </div>
 
                         <div class="card w-25 m-4">
-                            <img class="card-img-top" src="./assets/instagram.png" alt="Card image cap">
+                            <img class="card-img-top"
+                                src="https://purepng.com/public/uploads/large/purepng.com-black-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-691522330439mcueb.png"
+                                alt="Card image cap" />
                             <div class="card-body">
-                                <h5 id="item_two" class="card-title">Instagram</h5>
-                                <p class="card-text">by Meta</p>
+                                <h5 id="item_two" class="card-title">Black Tee Shirt</h5>
+                                <p class="card-text">by MetaInc</p>
                                 <a href="#" class="btn btn-primary">Go to Website</a>
                             </div>
                         </div>
 
                         <div class="card w-25 m-4">
-                            <img class="card-img-top" src="./assets/twitter.png" alt="Card image cap">
+                            <img class="card-img-top"
+                                src="https://purepng.com/public/uploads/large/purepng.com-green-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-691522330493iyjsl.png"
+                                alt="Card image cap" />
                             <div class="card-body">
-                                <h5 id="item_three" class="card-title">Twitter</h5>
-                                <p class="card-text">by Twitter Inc</p>
+                                <h5 id="item_three" class="card-title">Green Tee Shirt</h5>
+                                <p class="card-text">by UCB Inc</p>
                                 <a href="#" class="btn btn-primary">Go to Website</a>
                             </div>
                         </div>
@@ -131,28 +146,34 @@
 
                     <div class="d-flex">
                         <div class="card w-25 m-4">
-                            <img class="card-img-top" src="./assets/gmail.png" alt="Card image cap">
+                            <img class="card-img-top"
+                                src="https://purepng.com/public/uploads/large/purepng.com-purple-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-691522330509cf0a6.png"
+                                alt="Card image cap" />
                             <div class="card-body">
-                                <h5 id="item_four" class="card-title">Gmail</h5>
-                                <p class="card-text">by Google Inc.</p>
+                                <h5 id="item_four" class="card-title">Purple Tee</h5>
+                                <p class="card-text">by Verse</p>
                                 <a href="#" class="btn btn-primary">Go to Website</a>
                             </div>
                         </div>
 
                         <div class="card w-25 m-4">
-                            <img class="card-img-top" src="./assets/linkedin.png" alt="Card image cap">
+                            <img class="card-img-top"
+                                src="https://purepng.com/public/uploads/large/purepng.com-red-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-691522330526tyb03.png"
+                                alt="Card image cap" />
                             <div class="card-body">
-                                <h5 id="item_five" class="card-title">LinkedIn</h5>
-                                <p class="card-text">by linkedin.</p>
+                                <h5 id="item_five" class="card-title">Red Tshirt</h5>
+                                <p class="card-text">Kite inc</p>
                                 <a href="#" class="btn btn-primary">Go to Website</a>
                             </div>
                         </div>
 
-                        <div class="card  w-25 m-4">
-                            <img class="card-img-top" src="./assets/youtube.png" alt="Card image cap">
+                        <div class="card w-25 m-4">
+                            <img class="card-img-top"
+                                src="https://purepng.com/public/uploads/large/purepng.com-blue-t-shirtclothingt-shirtt-shirtdressfashionclothshirt-691522330467vjhb0.png"
+                                alt="Card image cap" />
                             <div class="card-body">
-                                <h5 id="item_six" class="card-title">Youtube</h5>
-                                <p class="card-text">by Google Inc</p>
+                                <h5 id="item_six" class="card-title">Blue Tee by Meta</h5>
+                                <p class="card-text">by MetaInc</p>
                                 <a href="#" class="btn btn-primary">Go to Website</a>
                             </div>
                         </div>
