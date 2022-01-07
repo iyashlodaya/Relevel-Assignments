@@ -35,9 +35,10 @@
                 </ul>
             </div>
             <div class="d-flex ms-auto pe-2">
-                <form onsubmit="searchItem(event)" class="d-flex">
-                    <input oninput="searchItem(event)" id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" onsubmit="searchItem(event)">Search</button>
+                <form onsubmit="searchCaseSensitve(event)" class="d-flex">
+                    <input oninput="searchCaseSensitve(event)" id="searchInput" class="form-control me-2" type="search"
+                        placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" onsubmit="searchCaseSensitve(event)">Search</button>
                 </form>
             </div>
         </div>
@@ -48,14 +49,27 @@
                 <div class="filterSection pt-2">
                     <h6><small>FILTERS</small></h6>
                     <hr>
-                    <div class="price-filer">
-                        <p><small><b>Price Range</b></small></p>
+                    <div class="starts-with-filter">
+                        <p><small><b>Starts With</b></small></p>
                         <div class="d-flex">
-                            <span class="font-weight-bold mr-4 mt-3">₹0</span>
-                            <form class="range-field w-75">
-                                <input type="range" class="form-range" id="customRange1">
-                            </form>
-                            <span class="font-weight-bold indigo-text ml-2 mt-3">₹1000</span>
+                            <input oninput="searchByStartLetter()" id="startsWithInput" class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="ends-with-filter">
+                        <p><small><b>Ends With</b></small></p>
+                        <div class="d-flex">
+                            <input oninput="searchByEndLetter()" id="endsWithInput" class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="includes-filter">
+                        <p><small><b>Includes</b></small></p>
+                        <div class="d-flex">
+                            <input oninput="searchByIncludedLetter()" id="includesInput" class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
                         </div>
                     </div>
                     <hr>
