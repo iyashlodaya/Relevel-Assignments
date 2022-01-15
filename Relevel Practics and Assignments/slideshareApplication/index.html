@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>StarWars Slide Share App</title>
+</head>
+<body>
+    <script>
+        var i = 0;  
+        var images = []
+        images[0] = 'https://miro.medium.com/max/1200/0*BKdazZwzr6yjQXdK'
+        images[1] = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ4SFZ2t2o_-PzFhn9DAUPtXv1u5k7H4NA5g&usqp=CAU'
+        images[2] = 'https://cdn.mos.cms.futurecdn.net/2nzWKzbM4m3ufd2NP7Zv5P.png'
+       
+        function changeImg() {
+               if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;  
+            }
+			document.slide.src = images[i];
+            setTimeout("changeImg()", 1000)
+        }
+ 
+        window.onload = changeImg
+    </script>
+    <img name="slide" width="600" height="320">
+</body>
+</HTML>
