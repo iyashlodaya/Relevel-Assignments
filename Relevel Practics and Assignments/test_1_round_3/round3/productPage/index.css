@@ -1,0 +1,65 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.product {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.product-detail {
+    font-size: 12px;
+    color: grey;
+    padding-top: 5px;
+}
+
+.product-rating {
+    background-color: green;
+    color: white;
+    width: 4vw;
+    border-radius: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+.product-prices {
+    display: flex;
+    margin-top: 10px;
+}
+
+#cost-price {
+    margin: 0;
+    color: grey;
+    text-decoration: line-through;
+    margin-right: 5px;
+
+}
+
+#selling-price {
+    margin: 0;
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+#product-discount {
+    margin-top: 0;
+    color: green;
+}
+
+#view-product-button {
+    background-color: orangered;
+    padding:15px;
+    border: 0;
+    width: 100%;
+    font-size: 12px;
+    color: white;
+}

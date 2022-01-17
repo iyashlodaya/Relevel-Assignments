@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Category Page</title>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D1E8E4;">
+    <a class="navbar-brand" href="../categoryPage/category.html">
+      <img src="clothes.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      TeeShop
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Accesories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TShirts</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="filterSection pt-2">
+          <h6><small>FILTERS</small></h6>
+          <hr>
+          <div class="price-filer">
+            <p><small><b>Price Range</b></small></p>
+            <div class="d-flex">
+              <span class="font-weight-bold mr-4 mt-3">₹0</span>
+              <form class="range-field w-75">
+                <input type="range" class="form-range" id="customRange1">
+              </form>
+              <span class="font-weight-bold indigo-text ml-2 mt-3">₹1000</span>
+            </div>
+          </div>
+          <hr>
+          <div class="category-filer">
+            <p><small><b>Themes</b></small></p>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+              <label class="form-check-label" for="flexCheckChecked">
+                Star Wars
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+              <label class="form-check-label" for="flexCheckChecked">
+                Tie and Die
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                SuperHero
+              </label>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="productSection pt-2 d-flex justify-content-between">
+          <div class="card" style="width: 16rem;">
+            <img class="card-img-top"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4n2ZNNdojOBJI9fq0jYVvpaafmo49XM1Opw&usqp=CAU"
+              alt="Card image cap" height="280">
+            <div class="card-body">
+              <h5 class="card-title">Blue Mens Tee</h5>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                  <p class="card-text pe-1" id="cost-price">₹649</p>
+                  <p class="card-text text-secondary" id="selling-price"><del>₹1000</del></p>
+                </div>
+                <div>
+                  <p class="card-text" id="discount-percentage">3%</p>
+                </div>
+              </div>
+              <a class="btn btn-primary mb-1 w-100" href="../productPage/product.html">View Product</a>
+            </div>
+          </div>
+          <div class="card" style="width: 16rem;">
+            <img class="card-img-top"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bgi-JJhk9DDo-TtBCAf2lo-vFS74SA7OKA&usqp=CAU"
+              alt="Card image cap" height="280">
+            <div class="card-body">
+              <h5 class="card-title">Blue Tee with Quote</h5>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                  <p class="card-text pe-1" id="cost-price">₹750</p>
+                  <p class="card-text text-secondary" id="selling-price"><del>₹1000</del></p>
+                </div>
+                <div>
+                  <p class="card-text" id="discount-percentage">3%</p>
+                </div>
+              </div>
+              <button class="btn btn-primary mb-1 w-100">View Product</button>
+            </div>
+          </div>
+          <div class="card" style="width: 16rem;">
+            <img class="card-img-top"
+              src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1395967/2020/8/10/f6a29b58-0817-4fc4-ba82-0e9645ad1c991597049167240-Kook-N-Keech-Marvel-Red-Printed-Sweatshirt-3821597049166420-1.jpg"
+              alt="Card image cap" height="280">
+            <div class="card-body">
+              <h5 class="card-title">Orange IronMan Tee</h5>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                  <p class="card-text pe-1" id="cost-price">₹599</p>
+                  <p class="card-text text-secondary" id="selling-price"><del>₹1000</del></p>
+                </div>
+                <div>
+                  <p class="card-text" id="discount-percentage">3%</p>
+                </div>
+              </div>
+              <button class="btn btn-primary mb-1 w-100">View Product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
