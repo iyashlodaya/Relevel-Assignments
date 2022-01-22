@@ -25,16 +25,16 @@ addTaskBtn.onclick = function () {
   }
 
   const rowData = `
-  <td>
+  <td class="ps-3">
   ${taskType.value}
   </td>
-  <td class="pt-2">
+  <td class="text-center">
   ${taskDescription.value}
   </td>
-  <td>
+  <td class="text-center">
   <img src="${imageAddressInput.value}" alt="todo image" class="image-fluid" width="120">
   </td>
-  <td>
+  <td class="text-center">
   <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
   data-bs-target="#editTaskModal" onclick="openEditForm(${taskListWrapper.children.length})">Edit</button>
   <button type="button" class="btn btn-danger" onclick="deleteTask(${taskListWrapper.children.length})">Delete</button>
@@ -175,9 +175,9 @@ function renderFilteredTasks() {
   } else if (filterTaskType1.checked) {
     for (let i = 0; i < taskC.length; i++) {
       if (
-        filterTaskType1.value == taskC[i].children[2].textContent &&
+        filterTaskType1.value == taskC[i].children[0].innerText &&
         searchInput &&
-        taskC[i].children[1].textContent.search(searchInput.value) > -1
+        taskC[i].children[1].innerText.search(searchInput.value) > -1
       ) {
         taskC[i].style.display = "table-row";
       } else {
@@ -187,9 +187,9 @@ function renderFilteredTasks() {
   } else if (filterTaskType2.checked) {
     for (let i = 0; i < taskC.length; i++) {
       if (
-        filterTaskType2.value == taskC[i].children[2].textContent &&
+        filterTaskType2.value == taskC[i].children[0].innerText &&
         searchInput &&
-        taskC[i].children[1].textContent.search(searchInput.value) > -1
+        taskC[i].children[1].innerText.search(searchInput.value) > -1
       ) {
         taskC[i].style.display = "table-row";
       } else {
@@ -199,9 +199,9 @@ function renderFilteredTasks() {
   } else if (filterTaskType3.checked) {
     for (let i = 0; i < taskC.length; i++) {
       if (
-        filterTaskType3.value == taskC[i].children[2].textContent &&
+        filterTaskType3.value == taskC[i].children[0].innerText &&
         searchInput &&
-        taskC[i].children[1].textContent.search(searchInput.value) > -1
+        taskC[i].children[1].innerText.search(searchInput.value) > -1
       ) {
         taskC[i].style.display = "table-row";
       } else {
