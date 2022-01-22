@@ -9,56 +9,58 @@ const filterTaskType3 = document.getElementById("filterTaskType3");
 addTaskBtn.onclick = function () {
   const taskDescription = document.getElementById("addTaskDescription");
   const taskType = document.getElementById("addTaskType");
+  const taskColor = document.getElementById("addColor");
   const imageAddressInput = document.getElementById("imageAddressInput");
-  console.log(imageAddressInput.value);
   const rowEl = document.createElement("TR");
   rowEl.id = "task-" + taskListWrapper.children.length;
 
-  rowEl.innerHTML =
-    '<th scope="row">' +
-    taskListWrapper.children.length +
-    "</th>" +
-    "<td>" +
-    taskDescription.value +
-    "</td>" +
-    "<td>" +
-    taskType.value +
-    "</td>" +
-    "<td>" +
-    '<button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"' +
-    'data-bs-target="#editTaskModal" onclick="openEditForm(' +
-    taskListWrapper.children.length +
-    ')">' +
-    "Edit" +
-    "</button>" +
-    '<button type="button" class="btn btn-danger" onclick="deleteTask(' +
-    taskListWrapper.children.length +
-    ')">Delete</button>' +
-    "</td>" +
-    "<td>" +
-    "<img src=" +
-    imageAddressInput.value +
-    ' alt="todo image" class="image-fluid" width="200">' +
-    "</td>";
+  if (taskDescription.value.trim().length === 0) {
+    alert("Please Enter Task Description!");
+    return;
+  }
+
+  if (taskType.value === "Select Priority") {
+    alert("Please Select Priority From List");
+    return;
+  }
+
+  const rowData = `
+  <td>
+  ${taskType.value}
+  </td>
+  <td class="pt-2">
+  ${taskDescription.value}
+  </td>
+  <td>
+  <img src="${imageAddressInput.value}" alt="todo image" class="image-fluid" width="120">
+  </td>
+  <td>
+  <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
+  data-bs-target="#editTaskModal" onclick="openEditForm(${taskListWrapper.children.length})">Edit</button>
+  <button type="button" class="btn btn-danger" onclick="deleteTask(${taskListWrapper.children.length})">Delete</button>
+  </td>
+  `;
+
+  rowEl.innerHTML = rowData;
 
   //set row css class name which is returned by function setPriorityColor
-  rowEl.className = setPriorityColor(taskType.value);
+  rowEl.className = setPriorityColor(taskColor.value);
 
   taskListWrapper.appendChild(rowEl);
 
-  taskDescription.value = "Add Description";
+  taskDescription.value = "";
   taskType.selectedIndex = 0;
   imageAddressInput.value = "";
 };
 //assignment_part code set priority color 11th Jan DOm in Depth
 // setPriorityColor Function
 /* Takes priority number as argument and returns css class */
-const setPriorityColor = (priority) => {
-  if (priority == 1) {
+const setPriorityColor = (color) => {
+  if (color == "Light Green") {
     return "priority-1";
-  } else if (priority == 2) {
+  } else if (color == "Light Salmon") {
     return "priority-2";
-  } else if (priority == 3) {
+  } else if (color == "Yellow") {
     return "priority-3";
   }
 };
@@ -67,18 +69,21 @@ editTaskBtn.onclick = function () {
   const taskDescription = document.getElementById("editTaskDescription");
   const taskType = document.getElementById("editTaskType");
   const editImageInput = document.getElementById("editImageAddressInput");
+  const editColor = document.getElementById("editColor");
 
+  taskListWrapper.children[currentEditTask].children[0].textContent =
+    taskType.value;
   taskListWrapper.children[currentEditTask].children[1].textContent =
     taskDescription.value;
-  taskListWrapper.children[currentEditTask].children[2].textContent =
-    taskType.value;
   //set row css class name which is returned by function setPriorityColor
   taskListWrapper.children[currentEditTask].className = setPriorityColor(
-    taskType.value
+    editColor.value
   );
 
   //setting new image link
-  taskListWrapper.children[currentEditTask].children[4].firstChild.src = editImageInput.value
+  console.log(taskListWrapper.children[currentEditTask].children[2]);
+  taskListWrapper.children[currentEditTask].children[2].firstElementChild.src =
+    editImageInput.value;
 };
 
 function renderTaskList() {
@@ -102,10 +107,8 @@ function renderTaskList() {
 function openEditForm(i) {
   currentEditTask = i;
   document.getElementById("editTaskDescription").value =
-    taskListWrapper.children[i].children[1].textContent;
-  document.getElementById("editTaskType").value =
-    taskListWrapper.children[i].children[2].textContent;
-    document.getElementById("editImageAddressInput").value = "";
+    taskListWrapper.children[i].children[1].innerText;
+  document.getElementById("editImageAddressInput").value = "";
 }
 
 function deleteTask(i) {
