@@ -1,3 +1,7 @@
+body {
+  background-color: #f8f8f8;
+}
+
 .priority-1 {
   background-color: lightgreen;
 }
@@ -7,5 +11,9 @@
 }
 
 .priority-3 {
-  background-color: yellow;
+  background-color: #f3f167;
+}
+
+.w-45 {
+  width: 45vw;
 }
