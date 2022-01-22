@@ -5,6 +5,11 @@ const searchInput = document.getElementById("searchInput");
 const filterTaskType1 = document.getElementById("filterTaskType1");
 const filterTaskType2 = document.getElementById("filterTaskType2");
 const filterTaskType3 = document.getElementById("filterTaskType3");
+const headingsRow = document.getElementById("headings-row");
+
+if (taskListWrapper.innerHTML === "") {
+  headingsRow.style.display = "none";
+}
 
 addTaskBtn.onclick = function () {
   const taskDescription = document.getElementById("addTaskDescription");
@@ -25,16 +30,16 @@ addTaskBtn.onclick = function () {
   }
 
   const rowData = `
-  <td class="ps-3">
+  <td>
   ${taskType.value}
   </td>
-  <td class="text-center">
+  <td class="w-45">
   ${taskDescription.value}
   </td>
-  <td class="text-center">
+  <td>
   <img src="${imageAddressInput.value}" alt="todo image" class="image-fluid" width="120">
   </td>
-  <td class="text-center">
+  <td>
   <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
   data-bs-target="#editTaskModal" onclick="openEditForm(${taskListWrapper.children.length})">Edit</button>
   <button type="button" class="btn btn-danger" onclick="deleteTask(${taskListWrapper.children.length})">Delete</button>
@@ -47,7 +52,7 @@ addTaskBtn.onclick = function () {
   rowEl.className = setPriorityColor(taskColor.value);
 
   taskListWrapper.appendChild(rowEl);
-
+  headingsRow.style.display = "table-row";
   taskDescription.value = "";
   taskType.selectedIndex = 0;
   imageAddressInput.value = "";
