@@ -1,0 +1,70 @@
+#loginFormSection {
+  padding: 150px;
+}
+
+@media screen and (max-width: 750px) {
+  #banner-image {
+    visibility: hidden;
+  }
+}
+
+.signin-btn {
+  border: 1px solid grey;
+  padding: 14px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.i-facebook {
+  font-size: 1.4rem;
+  color: #139cf7;
+}
+.i-linkedin {
+  font-size: 1.4rem;
+  color: #0a66c2;
+}
+
+.form-control {
+  border-radius: 30px;
+  padding: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginBtn {
+  width: 100%;
+  border-radius: 30px;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+#error-alert {
+  display: none;
+}
+
+#success-msg-container {
+  display: none;
+}
+
+.progress-bar {
+  animation: fill 5s linear 1;
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
