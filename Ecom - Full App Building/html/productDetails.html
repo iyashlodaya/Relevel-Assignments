@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/productDetails.css">
+
+    <title>Product Details Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-default navbar-dark text-white" style="background-color: #6562f9;">
+        <!-- Navbar content -->
+        <div class="container">
+            <a class="navbar-brand" href="../html/productList.html">ZenShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#" style="color: white;">Home</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li id="userEmail" class="nav-item pe-2">
+
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-heart-o" style="font-size:16px; color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../html/login.html" class="nav-link">
+                            <i class="fa fa-shopping-bag" style="font-size:16px; color: white"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col-4">
+                <div class="product-container d-flex">
+                    <div class="product">
+                        <img class="product-image" height="500" width="400" id="product-image" src="" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="ps-5 col-8">
+                <div class="product-details">
+                    <div id="product-name" class="product-name">Blue Mens Tee</div>
+                    <div class="product-detail">Finish Color - Wenge blue. Knock Down</div>
+
+                    <div class="product-rating">4&#9733;</div>
+
+                    <div class="product-prices">
+                        <p id="selling-price">₹649</p>
+                        <p id="cost-price">₹700</p>
+                        <p id="product-discount">3% Off</p>
+                    </div>
+
+                    <div>
+                        <button id="view-product-button" class="btn btn-primary">Buy This Product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    
+    <script src="../js/productDetails.js"></script>
+</body>
+</html>
