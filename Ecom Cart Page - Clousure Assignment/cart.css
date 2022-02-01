@@ -1,0 +1,15 @@
+.quantity-input {
+  width: 15%;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.checkout-button-container {
+  margin-right: -160px;
+}
+
+#priceItem1 {
+  width: 64px;
+}
