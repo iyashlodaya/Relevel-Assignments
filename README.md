@@ -1,2 +1,2 @@
-# relevel_assignments
-Repo for Relevel Practice code and assignment
+# Relevel Assignments
+Repo for Relevel Practice code and assignments
